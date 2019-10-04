@@ -1,1 +1,6 @@
 D:\2 курс\C#\Лабы\Vitvor.Lab02\Vitvor.Lab02\obj\Debug\Vitvor.Lab02.csprojAssemblyReference.cache
+D:\2 курс\C#\Лабы\Vitvor.Lab02\Vitvor.Lab02\bin\Debug\Vitvor.Lab02.exe.config
+D:\2 курс\C#\Лабы\Vitvor.Lab02\Vitvor.Lab02\bin\Debug\Vitvor.Lab02.exe
+D:\2 курс\C#\Лабы\Vitvor.Lab02\Vitvor.Lab02\bin\Debug\Vitvor.Lab02.pdb
+D:\2 курс\C#\Лабы\Vitvor.Lab02\Vitvor.Lab02\obj\Debug\Vitvor.Lab02.exe
+D:\2 курс\C#\Лабы\Vitvor.Lab02\Vitvor.Lab02\obj\Debug\Vitvor.Lab02.pdb

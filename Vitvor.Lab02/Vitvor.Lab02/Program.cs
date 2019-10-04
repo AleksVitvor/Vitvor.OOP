@@ -35,7 +35,6 @@ namespace Vitvor.Lab02
             short bit3 = bit1;
 
             object Obj = b;
-            short b4 = (short)Obj;
             int b5 = (int)Obj;
 
             var HelloWorld = "Hello World";
@@ -45,7 +44,7 @@ namespace Vitvor.Lab02
             Console.WriteLine(z1.Value);
             Console.WriteLine(z1.HasValue);
             int? z2 = null;
-            Console.WriteLine(z2.Value);
+            //Console.WriteLine(z2.Value);
 
             string world = " world";
             String.Compare(world, hello);
@@ -67,11 +66,12 @@ namespace Vitvor.Lab02
             int[,] nums2 = { { 0, 1, 2 }, { 3, 4, 5 } };
             int rows = nums2.GetUpperBound(0) + 1;
             int colomns = nums2.Length;
+            Console.WriteLine($"{colomns/rows}, {rows}");
             for (int i = 0; i < rows; i++) 
             {
-                for (int j = 0; j < colomns; j++)
+                for (int j = 0; j < (colomns/rows); j++)
                 {
-                    Console.WriteLine($"{nums2[i, j]} \t");
+                    Console.Write($"{nums2[i, j]} ");
                 }
                 Console.WriteLine();
             }
@@ -87,15 +87,17 @@ namespace Vitvor.Lab02
             string newstr = Console.ReadLine();
             vs[position] = newstr;
 
+            Console.WriteLine("Работа со ступенчатым массивом");
             double[][] nums = new double[3][];
             nums[0] = new double[2];
             nums[1] = new double[3];
             nums[2] = new double[4];
             for (int i = 0; i < 3; i++)
             {
+                Console.WriteLine($"Работа с {i}-ой строкой");
                 for(int j=0;j<nums[i].Length;j++)
                 {
-                    nums[i, j] = Convert.ToDouble(Console.ReadLine());
+                    nums[i][j] = Convert.ToDouble(Console.ReadLine());
                 }
             }
 
@@ -111,13 +113,13 @@ namespace Vitvor.Lab02
 
             Console.WriteLine(Tuple.Equals(person, boy));
             int[] mass1 = { 1, 2, 3, 0, 10 };
-            Tuple localFunction(int[] mass, string str)
+            (int, int, int, char) localFunction(int[] mass, string str)
             {
-                var result = (mass.Max(), mass.Min(), mass.Sum(), str[0]);
-                return result;
+                return (mass.Max(), mass.Min(), mass.Sum(), str[0]);
             }
             var result=localFunction(mass1, HelloWorld);
             Console.WriteLine(result.ToString());
+            Console.ReadLine();
         }  
     }
 }
