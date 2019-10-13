@@ -6,69 +6,118 @@ using System.Threading.Tasks;
 
 namespace Vitvor.Lab03
 {
-    class Vitvor_Date
+    partial class Vitvor_Date
     {
-        private int Day = -1;
+        static private int _numbers;
+        readonly int _ID;
+        private int _day = -1;
         public int day
         {
             get
             {
-                return Day;
+                return _day;
             }
             set
             {
                 if (value > 0 || value < 32)
                 {
-                    Day = value;
+                    _day = value;
                 }
                 else
                 {
                     Console.WriteLine("Превышено допустимое значение номера дня, установлен номер дня = 31");
-                    Month = 31;
+                    _day = 31;
                 }
             }
         }
-        private int Year;
-        private int Month = -1;
+        private int _year;
+       
+        private int _month = -1;
         public int month
         {
             get
             {
-                return Month;
+                return _month;
             }
-            set
+            private set
             {
-                if (value > 1 || value < 12)
+                if (value > 0 && value < 13)
                 {
-                    Month = value;
+                    _month = value;
                 }
                 else
                 {
                     Console.WriteLine("Превышено допустимое значение номера месяца, установлен номер месяца = 12");
-                    Month = 12;
+                    _month = 12;
                 }
             }
         }
-        public Vitvor_Date(int da, int mont, int year)
+        public Vitvor_Date(int Day, int Month, int Year)
         {
-            day = da;
-            month = mont;
-            Year = year;
+            _numbers++;
+            var datetime = new Random();
+            day = Day;
+            month = Month;
+            _year = Year;
+            _ID = (int)(_day * Math.E + _month * Math.PI + _year * datetime.Next(10,99));
         }
-        public Vitvor_Date(int da, int year)
+        public Vitvor_Date(int Day, int year = 2019)
         {
-            day = da;
+            _numbers++;
+            var datetime = new Random();
+            day = Day;
             Console.WriteLine("Пожалуйста, введите месяц");
             month = Convert.ToInt32(Console.ReadLine());
-            Year = year;
+            _year = year;
+            _ID = (int)(_day * Math.E + _month * Math.PI + _year * datetime.Next(0, 100));
         }
-        public Vitvor_Date(int da=1)
+        public Vitvor_Date()
         {
-            day = da;
-            Console.WriteLine("Пожалуйста, введите месяц и год");
+            _numbers++;
+            var datetime = new Random();
+            Console.WriteLine("Пожалуйста, введите день");
+            day = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Пожалуйста, введите месяц");
             month = Convert.ToInt32(Console.ReadLine());
-            Year = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Пожалуйста, введите год");
+            _year = Convert.ToInt32(Console.ReadLine());
+            _ID = (int)(_day * Math.E + _month * Math.PI + _year * datetime.Next(0, 100));
+        }
+        static Vitvor_Date()
+        {
+            Console.WriteLine("Вы создали объект дата");
         }
         
+        ~Vitvor_Date()
+        {
+            Console.Beep();
+        }
+        public void SomeDayLater(ref int NumbersOfDays)
+        {
+            _day = _day + NumbersOfDays;
+            if(_day>31)
+            {
+                _month++;
+                _day = _day - 31;
+            }
+        }
+        static public string InfoAboutClass()
+        {
+            return $"Class name is Vitvor_Date, numbers of objects are {_numbers}";
+        }
+        public bool Search(int Year)
+        {
+            if (_year == Year)
+                return true;
+            else
+                return false;
+        }
+        public bool SearchByDay(int Day)
+        {
+            if (_day == Day)
+                return true;
+            else
+                return false;
+        }
     }
 }

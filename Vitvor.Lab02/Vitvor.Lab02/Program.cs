@@ -35,7 +35,9 @@ namespace Vitvor.Lab02
             short bit3 = bit1;
 
             object Obj = b;
+                b = 100;
             int b5 = (int)Obj;
+            Console.WriteLine($"{b}+{b5}");
 
             var HelloWorld = "Hello World";
             var v = 144;
@@ -92,10 +94,10 @@ namespace Vitvor.Lab02
             nums[0] = new double[2];
             nums[1] = new double[3];
             nums[2] = new double[4];
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < nums.Length; i++) 
             {
                 Console.WriteLine($"Работа с {i}-ой строкой");
-                for(int j=0;j<nums[i].Length;j++)
+                for (int j = 0; j < nums[i].Length; j++) 
                 {
                     nums[i][j] = Convert.ToDouble(Console.ReadLine());
                 }
