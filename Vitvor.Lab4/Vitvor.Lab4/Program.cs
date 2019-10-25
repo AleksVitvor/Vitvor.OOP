@@ -16,8 +16,13 @@ namespace Vitvor.Lab4
             list.Create(numbers);
             Vitvor_List list1 = new Vitvor_List(3);
             list1.Create(3);
+            ObjectInList Object = list1[1].Sum(list[1]);
             Vitvor_List list2 = list + list1;
+            Console.WriteLine(list != list1);
+            Console.WriteLine(list1 > list1[3]);
             Console.ReadLine();
+            Console.WriteLine(list1.ToString());
+            list1[0].nameofcoach.DeleteAllVovel();
         }
     }
 }

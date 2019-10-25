@@ -8,6 +8,17 @@ namespace Vitvor.Lab4
 {
     class Vitvor_List
     {
+        private class Date
+        {
+            int _Day { get; set; }
+            int _Month { get; set; }
+            public Date(int Day, int Month)
+            {
+                _Day = Day;
+                _Month = Month;
+            }
+
+        }
         private int _numbers;
         public int Numbers
         {
@@ -24,8 +35,13 @@ namespace Vitvor.Lab4
             }
         }
         ObjectInList[] _Lists;
+        private Owner owner = new Owner("Alex", "BelSTU");
         public Vitvor_List(int numbers)
         {
+            Console.WriteLine("Please, enter date");
+            int day = Convert.ToInt32(Console.ReadLine());
+            int month = Convert.ToInt32(Console.ReadLine());
+            Date date = new Date(day, month);
             Numbers = numbers;
             _Lists = new ObjectInList[numbers];
         }
@@ -94,6 +110,10 @@ namespace Vitvor.Lab4
                 NewList[i] = new ObjectInList(list2._Lists[j].nameofteam, list2._Lists[j].nameofcoach, list2._Lists[j].NumbersOfPlayers);
             }
             return NewList;
+        }
+        public override string ToString()
+        {
+            return ($"List consist of {_numbers} and creator is {owner._Name} from {owner._Organization} with ID {owner._ID}");
         }
     }
 }
