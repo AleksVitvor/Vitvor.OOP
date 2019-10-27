@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Vitvor.Lab4
 {
@@ -34,6 +30,7 @@ namespace Vitvor.Lab4
                     _numbers = 1;
             }
         }
+
         ObjectInList[] _Lists;
         private Owner owner = new Owner("Alex", "BelSTU");
         public Vitvor_List(int numbers)

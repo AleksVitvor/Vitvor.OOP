@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Vitvor.Lab4
+﻿namespace Vitvor.Lab4
 {
     static class StaticOperation
     {
@@ -16,6 +10,10 @@ namespace Vitvor.Lab4
         public static int Difference(this Vitvor_List obj1, Vitvor_List obj2)
         {
             return (obj1.Numbers - obj2.Numbers);
+        }
+        public static string Numbers(this Vitvor_List obj1)
+        {
+            return ($"There are {obj1.Numbers} objects in this list");
         }
     }
 }
