@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vitvor.Lab5
+namespace Vitvor.OOP5
 {
-    interface Control
+    abstract class Transport
     {
-        void show();
-        void input();
-        void resize();
     }
 }

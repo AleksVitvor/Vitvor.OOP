@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("Vitvor.Lab5")]
+[assembly: AssemblyTitle("Vitvor.OOP5")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Vitvor.Lab5")]
+[assembly: AssemblyProduct("Vitvor.OOP5")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("5a1f67ad-a77e-4659-b1ba-027b6224ac11")]
+[assembly: Guid("0a3b7430-ad4a-4dff-a3ba-1cca9698cba5")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

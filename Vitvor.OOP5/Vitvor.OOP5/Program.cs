@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Vitvor.Lab5
+namespace Vitvor.OOP5
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Circle circle = new Circle();
+            Boeing boeing = new Boeing();
         }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5A1F67AD-A77E-4659-B1BA-027B6224AC11}</ProjectGuid>
+    <ProjectGuid>{0A3B7430-AD4A-4DFF-A3BA-1CCA9698CBA5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Vitvor.Lab5</RootNamespace>
-    <AssemblyName>Vitvor.Lab5</AssemblyName>
+    <RootNamespace>Vitvor.OOP5</RootNamespace>
+    <AssemblyName>Vitvor.OOP5</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Box_Button.cs" />
-    <Compile Include="Circle.cs" />
-    <Compile Include="Control.cs" />
-    <Compile Include="Element_Of_Control.cs" />
-    <Compile Include="Geometric_Figure.cs" />
+    <Compile Include="Aviation.cs" />
+    <Compile Include="Boeing.cs" />
+    <Compile Include="Cargo_Airplane.cs" />
+    <Compile Include="Passenger_Plane.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rectangle.cs" />
+    <Compile Include="Transport.cs" />
+    <Compile Include="TU134.cs" />
+    <Compile Include="War_Plane.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
