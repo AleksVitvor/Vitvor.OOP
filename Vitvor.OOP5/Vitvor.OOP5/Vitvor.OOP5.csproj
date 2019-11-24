@@ -43,13 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Airline.cs" />
     <Compile Include="Aviation.cs" />
+    <Compile Include="AviatoinException.cs" />
     <Compile Include="Boeing.cs" />
     <Compile Include="Cargo_Airplane.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Create.cs" />
+    <Compile Include="DataExeption.cs" />
+    <Compile Include="PassengerPlaneException.cs" />
     <Compile Include="Passenger_Plane.cs" />
+    <Compile Include="Printer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transport.cs" />
+    <Compile Include="Transport1.cs" />
     <Compile Include="TU134.cs" />
     <Compile Include="War_Plane.cs" />
   </ItemGroup>

@@ -33,5 +33,9 @@ namespace Vitvor.OOP5
             Console.WriteLine("Введите грузоподъёмность самолёта");
             int carrying_capacity = Convert.ToInt32(Console.ReadLine());
         }
+        public override string ToString()
+        {
+            return $"Тип грузовой самолёт с грузоподъёмность {_Carrying_Capacity}";
+        }
     }
 }

@@ -14,5 +14,9 @@ namespace Vitvor.OOP5
             Console.WriteLine("Введите назначение самолёта");
             Appointment = Console.ReadLine();
         }
+        public override string ToString()
+        {
+            return $"Тип военный самолёт";
+        }
     }
 }

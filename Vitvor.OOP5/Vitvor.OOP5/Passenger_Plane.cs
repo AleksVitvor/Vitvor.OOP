@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Vitvor.OOP5
 {
@@ -23,15 +19,27 @@ namespace Vitvor.OOP5
                 }
                 else
                 {
-                    Console.WriteLine("Установлена количество человек 200");
-                    NumberOfPassangers = 200;
+                    throw new PassengerPlaneException();
                 }
             }
         }
         public Passenger_Plane()
         {
             Console.WriteLine("Введите количество пассажиров самолёта");
-            int carrying_capacity = Convert.ToInt32(Console.ReadLine());
+            string _NumberOfPassengers_ = Console.ReadLine();
+            int _number;
+            if (!(Int32.TryParse(_NumberOfPassengers_, out _number)))
+            {
+                throw new PassengerPlaneException();
+            }
+            else
+            {
+                _NumberOfPassangers = _number;
+            }
+        }
+        public override string ToString()
+        {
+            return $"Тип пассжирский самолёт";
         }
     }
 }

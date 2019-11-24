@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vitvor.OOP5
 {
-    class Aviation: Transport
+    class Aviation: Transport, IComparable
     {
         private int Wingspan;
         public int _Wingspan
@@ -23,14 +23,26 @@ namespace Vitvor.OOP5
                 }
                 else
                 {
-                    Wingspan = 10;
+                    throw new AviatoinException();
                 }
             }
         }
         public Aviation()
         {
-            Console.WriteLine("Введите размах крыла");
+            Console.WriteLine("Введите дальность полёта");
             _Wingspan = Convert.ToInt32(Console.ReadLine());
+        }
+        public override string ToString()
+        {
+            return $"Тип авиация с дальностью полёта {_Wingspan} км";
+        }
+        public int CompareTo(object obj)
+        {
+            Aviation aviation = obj as Aviation;
+            if (aviation != null)
+                return this.Wingspan.CompareTo(aviation.Wingspan);
+            else
+                throw new Exception("Невозможно сравнить два объекта");
         }
     }
 }

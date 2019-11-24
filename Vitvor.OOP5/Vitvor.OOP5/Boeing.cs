@@ -15,5 +15,9 @@ namespace Vitvor.OOP5
             Console.WriteLine("Введите модель самолёта");
             Model = Console.ReadLine();
         }
+        public override string ToString()
+        {
+            return $"Тип пассжирский самолёт Boeing модели {Model}";
+        }
     }
 }

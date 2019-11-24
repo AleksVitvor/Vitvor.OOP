@@ -14,5 +14,9 @@ namespace Vitvor.OOP5
             Console.WriteLine("Введите страну производстав самолёта");
             CountryOfOrigin = Console.ReadLine();
         }
+        public override string ToString()
+        {
+            return $"Тип пассжирский самолёт ТУ-134 проимзведён в {CountryOfOrigin}";
+        }
     }
 }
