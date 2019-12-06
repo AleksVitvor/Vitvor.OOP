@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Vitvor.OOP5
 {
+    [Serializable]
     class Passenger_Plane: Aviation
     {
         private int NumberOfPassangers;
@@ -13,6 +15,7 @@ namespace Vitvor.OOP5
             }
             set
             {
+                Debug.Assert(value > 0, "Введено неверное количество пассажиров");
                 if (value > 0)
                 {
                     NumberOfPassangers = value;

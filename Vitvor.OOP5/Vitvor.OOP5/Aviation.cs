@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vitvor.OOP5
 {
+    [Serializable]
     class Aviation: Transport, IComparable
     {
         private int Wingspan;

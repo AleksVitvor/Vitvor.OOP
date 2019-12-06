@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vitvor.OOP5
 {
+    [Serializable]
     abstract class CCreate
     {
         public virtual void Create()

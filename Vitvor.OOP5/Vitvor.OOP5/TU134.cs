@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vitvor.OOP5
 {
+    [Serializable]
     class TU134: Passenger_Plane
     {
         public string CountryOfOrigin { get; set; }

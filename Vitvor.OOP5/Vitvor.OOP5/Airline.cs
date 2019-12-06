@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Vitvor.OOP5
 {
+    [Serializable]
     class Airline
     {
         public List<Aviation> transports = new List<Aviation>();
@@ -17,14 +20,14 @@ namespace Vitvor.OOP5
         {
             int NumberOfPeople = 0;
             int Capacity = 0;
-            for(short i=0;i<transports.Count;i++)
+            for (short i = 0; i < transports.Count; i++)
             {
-                if(transports[i] is Cargo_Airplane)
+                if (transports[i] is Cargo_Airplane)
                 {
                     Capacity = Capacity + ((Cargo_Airplane)transports[i])._Carrying_Capacity;
                     continue;
                 }
-                if(transports[i] is Passenger_Plane)
+                if (transports[i] is Passenger_Plane)
                 {
                     NumberOfPeople = NumberOfPeople + ((Passenger_Plane)transports[i])._NumberOfPassangers;
                 }

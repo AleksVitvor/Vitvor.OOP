@@ -10,6 +10,7 @@ namespace Vitvor.OOP5
     {
         void Create();
     }
+    [Serializable]
     partial class Transport : CCreate, ICreate
     {
         void ICreate.Create()

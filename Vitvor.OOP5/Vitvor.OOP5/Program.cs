@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Vitvor.OOP5
 {
@@ -21,17 +19,22 @@ namespace Vitvor.OOP5
                 airline.Add(cargo);
                 airline.Sort();
                 airline.ToString();
-                int wing;
-                string _wing = Console.ReadLine();
-                Controller controller = new Controller();
-                if (Int32.TryParse(_wing, out wing))
+                //int wing;
+                //string _wing = Console.ReadLine();
+                //Controller controller = new Controller();
+                //if (Int32.TryParse(_wing, out wing))
+                //{
+                //    Console.WriteLine(controller.Find(wing, airline.transports));
+                //}
+                //else
+                //{
+                //    throw new DataEcxeption();
+                //}
+                BinaryFormatter formatter = new BinaryFormatter();
+                using(FileStream fs=new FileStream("airline.dat", FileMode.OpenOrCreate))
                 {
-                    Console.WriteLine(controller.Find(wing, airline.transports));
+                    formatter.Serialize(fs, airline);
                 }
-                else
-                {
-                    throw new DataEcxeption();
-                }            
                 airline.transports.Remove(u134);
             }
             catch(PassengerPlaneException e)

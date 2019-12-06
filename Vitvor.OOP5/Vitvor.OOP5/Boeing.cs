@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vitvor.OOP5
 {
+    [Serializable]
     class Boeing: Passenger_Plane
     {
         public string Model { get; set; }

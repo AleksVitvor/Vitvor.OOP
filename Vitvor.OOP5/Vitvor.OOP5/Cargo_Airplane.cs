@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vitvor.OOP5
 {
+    [Serializable]
     class Cargo_Airplane: Aviation
     {
         private int Carrying_Capacity;

@@ -33,8 +33,7 @@ namespace Vitvor.Lab4
                     _numbersOfPleyers = value;
                 else
                 {
-                    Console.WriteLine("Error, you should have one or more players");
-                    _numbersOfPleyers = 1;
+                    throw new Error();
                 }
             }
         }
@@ -52,6 +51,10 @@ namespace Vitvor.Lab4
             NameOfTeam = nameOfTeam;
             NameOfCoach = nameOfCoach;
             NumbersOfPlayers = numbersOfPlayers;
+        }
+        public override string ToString()
+        {
+            return $"Имя команды {NameOfTeam}, имя тренера {NameOfCoach}, количество игроков {NumbersOfPlayers}";
         }
     }
 }

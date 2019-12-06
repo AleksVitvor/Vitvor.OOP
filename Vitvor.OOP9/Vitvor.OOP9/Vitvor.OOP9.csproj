@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CCB4EC39-315C-41E2-8002-6984D93A0B35}</ProjectGuid>
+    <ProjectGuid>{32BE58DC-8779-4486-A540-D891D7A4299D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Vitvor.Lab4</RootNamespace>
-    <AssemblyName>Vitvor.Lab4</AssemblyName>
+    <RootNamespace>Vitvor.OOP9</RootNamespace>
+    <AssemblyName>Vitvor.OOP9</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Error.cs" />
-    <Compile Include="IController.cs" />
-    <Compile Include="ObjectInList.cs" />
-    <Compile Include="Owner.cs" />
+    <Compile Include="Boss.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringExtension.cs" />
-    <Compile Include="Vitvor_List.cs" />
+    <Compile Include="Worker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
