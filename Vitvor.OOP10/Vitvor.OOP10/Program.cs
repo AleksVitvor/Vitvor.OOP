@@ -13,14 +13,14 @@ namespace Vitvor.OOP10
         {
             ArrayList arrayList = new ArrayList();
             Random random = new Random();
-            for(short i=0;i<5;i++)
+            for (short i = 0; i < 5; i++)
             {
                 arrayList.Add(random.Next(11, 99));
             }
             Console.WriteLine("Первая коллекция из случайных чисел и другого включает: ");
             arrayList.Add("My substr");
             arrayList.RemoveAt(3);
-            foreach(var item in arrayList)
+            foreach (var item in arrayList)
             {
                 Console.WriteLine(item + " ");
             }
@@ -28,24 +28,25 @@ namespace Vitvor.OOP10
             Console.WriteLine(arrayList.Contains("My substr"));
 
             Stack<char> vs = new Stack<char>();
+            vs.Push('a');
+            vs.Push('c');
             Console.WriteLine("Введите количество входных символов");
             int size = Convert.ToInt32(Console.ReadLine());
-            for(int i=0; i<size; i++)
+            for (int i = 0; i < size; i++)
             {
                 char sym = Convert.ToChar(Console.ReadLine());
                 vs.Push(sym);
             }
-            vs.Push('a');
             Console.WriteLine("Введите колчество элементов для удаления");
             int toDel = Convert.ToInt32(Console.ReadLine());
-            for(int i=0;i<toDel;i++)
+            for (int i = 0; i < toDel; i++)
             {
                 vs.Pop();
             }
             foreach (char item in vs)
                 Console.WriteLine(item + " ");
             List<char> vs1 = new List<char>();
-            for(int i=0; i<vs.Count;i++)
+            for (int i = 0; i < vs.Count; i++)
             {
                 vs1.Add(vs.Pop());
             }
@@ -62,13 +63,14 @@ namespace Vitvor.OOP10
             airline.Push(third);
             foreach (Transport item in airline)
                 Console.WriteLine(item.ToString());
+            Console.WriteLine("Введите колчество элементов для удаления");
             int ToDelete = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < ToDelete; i++)
                 airline.Pop();
             foreach (Transport item in airline)
                 Console.WriteLine(item.ToString());
             List<Transport> transports = new List<Transport>();
-            for(int i=0; i<airline.Count;i++)
+            for (int i = 0; i < airline.Count; i++)
             {
                 transports.Add(airline.Pop());
             }

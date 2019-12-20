@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vitvor.OOP10
 {
-    class Transport:IComparable<Transport>
+    class Transport : IComparable<Transport>
     {
         public int Weight { get; set; }
         public int Capacity { get; set; }
@@ -26,6 +26,5 @@ namespace Vitvor.OOP10
         {
             return $"{Weight} {Capacity}";
         }
-    }
     }
 }
