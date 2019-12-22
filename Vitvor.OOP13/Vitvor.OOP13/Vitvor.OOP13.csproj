@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +49,7 @@
     <Compile Include="VASDirInfo.cs" />
     <Compile Include="VASDiskInfo.cs" />
     <Compile Include="VASFileInfo.cs" />
+    <Compile Include="VASFileManager.cs" />
     <Compile Include="VASLog.cs" />
   </ItemGroup>
   <ItemGroup>
