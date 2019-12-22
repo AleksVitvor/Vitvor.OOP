@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitvor.OOP15", "Vitvor.OOP15\Vitvor.OOP15.csproj", "{D070D4C7-B3D3-4DB0-8910-9A3B9A0FEEC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D070D4C7-B3D3-4DB0-8910-9A3B9A0FEEC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D070D4C7-B3D3-4DB0-8910-9A3B9A0FEEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D070D4C7-B3D3-4DB0-8910-9A3B9A0FEEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D070D4C7-B3D3-4DB0-8910-9A3B9A0FEEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB706AA2-0EC3-4509-BBA1-3A0927A2BE9D}
+	EndGlobalSection
+EndGlobal
