@@ -20,7 +20,7 @@ namespace Vitvor.OOP13
         }
         public void ReadAndDelete()
         {
-            using (StreamWriter writer = new StreamWriter(_data1))
+            using (StreamWriter writer = new StreamWriter(_data1, false))
             {
                 using (StreamReader reader = new StreamReader(_data))
                 {
@@ -36,8 +36,8 @@ namespace Vitvor.OOP13
                                 DateTime earlier;
                                 if (DateTime.TryParse(l, out earlier))
                                 {
-                                    if (earlier.Minute + 1 >= DateTime.Now.Minute)
-                                        writer.WriteLine(i);
+                                    if (earlier.Hour + 1 >= DateTime.Now.Hour)
+                                        writer.Write(i);
                                 }
                         }
                         }

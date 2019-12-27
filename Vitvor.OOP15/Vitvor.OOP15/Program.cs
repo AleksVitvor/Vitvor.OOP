@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Vitvor.OOP15
 {
@@ -39,7 +35,11 @@ namespace Vitvor.OOP15
             thread2.Start(x);
             thread1.Join();
             thread2.Join();
+            int num = 0;
+            TimerCallback callback = new TimerCallback(IAmTimer);
+            Timer timer = new Timer(callback, num, 0, 2000);
             Console.ReadLine();
+
         }
         public static void PrimeNumbers()
         {
@@ -69,6 +69,11 @@ namespace Vitvor.OOP15
                     Console.WriteLine(i);
                 barrier.SignalAndWait();
             }
+        }
+        
+        public static void IAmTimer(object obj)
+        {
+            Console.WriteLine("I'm timer");
         }
     }
 }
